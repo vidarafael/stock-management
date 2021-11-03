@@ -1,0 +1,15 @@
+[2021-10-30T14:13:33.741Z][QUERY]: DESC task;
+[2021-10-30T14:13:33.799Z][FAILED QUERY]: DESC task;
+[2021-10-30T14:13:33.799Z][QUERY ERROR]: Error: ER_NO_SUCH_TABLE: Table 'stock_management.task' doesn't exist
+[2021-10-30T14:13:43.793Z][QUERY]: DESC task;
+[2021-10-30T14:13:43.854Z][FAILED QUERY]: DESC task;
+[2021-10-30T14:13:43.854Z][QUERY ERROR]: Error: ER_NO_SUCH_TABLE: Table 'stock_management.task' doesn't exist
+[2021-10-30T14:13:52.602Z][QUERY]: DESC tasks;
+[2021-10-30T14:13:58.848Z][QUERY]: DESC tasks;
+[2021-11-02T16:35:25.588Z][QUERY]: SELECT `Company`.`id` AS `Company_id`, `Company`.`name` AS `Company_name`, `Company`.`createdAt` AS `Company_createdAt`, `Company`.`deletedAt` AS `Company_deletedAt`, `Company`.`updatedAt` AS `Company_updatedAt` FROM `company` `Company` WHERE `Company`.`deletedAt` IS NULL
+[2021-11-02T16:35:25.654Z][FAILED QUERY]: SELECT `Company`.`id` AS `Company_id`, `Company`.`name` AS `Company_name`, `Company`.`createdAt` AS `Company_createdAt`, `Company`.`deletedAt` AS `Company_deletedAt`, `Company`.`updatedAt` AS `Company_updatedAt` FROM `company` `Company` WHERE `Company`.`deletedAt` IS NULL
+[2021-11-02T16:35:25.654Z][QUERY ERROR]: Error: ER_BAD_FIELD_ERROR: Unknown column 'Company.createdAt' in 'field list'
+[2021-11-02T16:36:55.004Z][QUERY]: SELECT `Company`.`id` AS `Company_id`, `Company`.`name` AS `Company_name`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-02T16:44:33.800Z][QUERY]: SELECT `Company`.`id` AS `Company_id`, `Company`.`name` AS `Company_name`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-02T16:52:37.158Z][QUERY]: SELECT `Company`.`id` AS `Company_id`, `Company`.`name` AS `Company_name`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-02T16:56:05.044Z][QUERY]: SELECT `Company`.`id` AS `Company_id`, `Company`.`name` AS `Company_name`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `company` `Company` WHERE `Company`.`deleted_at` IS NULL
