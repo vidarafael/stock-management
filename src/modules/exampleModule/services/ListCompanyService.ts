@@ -7,11 +7,11 @@ import CompanyRepository from "../infra/typeorm/repositories/CompanyRepository";
 export default class ListCompanyService {
     constructor(
     @inject(CompanyRepository)
-    private companyRepository?: CompanyRepository,
+    private companyRepository: CompanyRepository,
     ) {}
 
     public async execute(): Promise<Company[] | undefined> {
-        return this.companyRepository?.find();
+        return this.companyRepository.find();
     }
 
 }
