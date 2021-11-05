@@ -4,23 +4,23 @@ import {Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColu
 @Entity('company')
 export default class Company implements ICompanyDTO {
     @PrimaryGeneratedColumn()
-    id: number;
+    id!: number;
 
     @Column()
-    name: string;
+    name!: string;
 
     @CreateDateColumn({
         name: "created_at",
     })
-    createdAt: Date;
+    createdAt!: Date;
 
     @UpdateDateColumn({
         name: "updated_at",
     })
-    updatedAt: Date;
+    updatedAt!: Date;
 
     @DeleteDateColumn({
         name: "deleted_at",
     })
-    deletedAt: Date;
+    deletedAt!: Date;
 }

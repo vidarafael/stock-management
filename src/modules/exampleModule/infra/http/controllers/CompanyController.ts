@@ -7,7 +7,7 @@ import ListCompanyService from "../../../services/ListCompanyService";
 export default class CompanyController {
     constructor(
         @inject(ListCompanyService)
-        private listCompanyService: ListCompanyService,
+        private listCompanyService?: ListCompanyService,
     ) {}
 
     async listCompany(
@@ -16,7 +16,7 @@ export default class CompanyController {
         next: NextFunction,
     ): Promise<Company[] | void> {
         try {
-            response.json(await this.listCompanyService.execute());
+            response.json(await this.listCompanyService?.execute());
         } catch (error) {
             next(error);
         }

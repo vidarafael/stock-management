@@ -10,8 +10,8 @@ export default class ListCompanyService {
     private companyRepository?: CompanyRepository,
     ) {}
 
-    public async execute(): Promise<Company[] | []> {
-        return this.companyRepository.find();
+    public async execute(): Promise<Company[] | undefined> {
+        return this.companyRepository?.find();
     }
 
 }
