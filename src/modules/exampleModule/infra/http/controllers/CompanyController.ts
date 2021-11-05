@@ -1,13 +1,13 @@
 import Company from "../../typeorm/entities/Company";
 import {NextFunction, Request, Response} from "express";
-import {inject, injectable} from "tsyringe";
+import {container, inject, injectable} from "tsyringe";
 import ListCompanyService from "../../../services/ListCompanyService";
 
 @injectable()
 export default class CompanyController {
     constructor(
-        @inject(ListCompanyService)
-        private listCompanyService?: ListCompanyService,
+        // @inject(ListCompanyService)
+        // private listCompanyService?: ListCompanyService,
     ) {}
 
     async listCompany(
@@ -16,7 +16,8 @@ export default class CompanyController {
         next: NextFunction,
     ): Promise<Company[] | void> {
         try {
-            response.json(await this.listCompanyService?.execute());
+            const listCompanyService = container.resolve(ListCompanyService)
+            response.json(await listCompanyService.execute());
         } catch (error) {
             next(error);
         }
