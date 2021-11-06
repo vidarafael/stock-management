@@ -23,11 +23,13 @@ export class stockManagementExampleMigration1636157284909 implements MigrationIn
                     name: 'created_at',
                     type: 'datetime',
                     isNullable: false,
+                    default: 'now()'
                 }),
                 new TableColumn({
                     name: 'updated_at',
                     type: 'datetime',
                     isNullable: false,
+                    default: 'now()'
                 }),
                 new TableColumn({
                     name: 'deleted_at',
