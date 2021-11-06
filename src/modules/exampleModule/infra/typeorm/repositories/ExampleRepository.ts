@@ -1,13 +1,13 @@
 import {injectable} from "tsyringe";
 import {EntityRepository, getRepository, Repository} from "typeorm";
-import Company from "../entities/Company";
+import ExampleEntity from "../entities/ExampleEntity";
 
 @EntityRepository()
 @injectable()
-export default class CompanyRepository {
-    private repository: Repository<Company>
+export default class ExampleRepository {
+    private repository: Repository<ExampleEntity>
     constructor() {
-        this.repository = getRepository(Company);
+        this.repository = getRepository(ExampleEntity);
     }
 
     find() {

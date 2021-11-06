@@ -1,9 +1,9 @@
 import {Router} from 'express';
-import CompanyController from "../controllers/CompanyController";
+import ExampleController from "../controllers/ExampleController";
 
 const exampleModule = Router();
-const companyController = new CompanyController();
+const exampleController = new ExampleController();
 
-exampleModule.get('/company', companyController.listCompany)
+exampleModule.get('', exampleController.listExample)
 
 export default exampleModule;

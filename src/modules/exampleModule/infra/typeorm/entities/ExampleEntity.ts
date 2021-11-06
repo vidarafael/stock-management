@@ -1,9 +1,9 @@
-import ICompanyDTO from "../../../dtos/ICompanyDTO";
+import IExampleDTO from "../../../dtos/IExampleDTO";
 import {Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn} from "typeorm";
 
-@Entity('company')
-export default class Company implements ICompanyDTO {
-    @PrimaryGeneratedColumn()
+@Entity('example_table', {name: 'example_table'})
+export default class ExampleEntity implements IExampleDTO {
+    @PrimaryGeneratedColumn({name: 'id_example_table'})
     id!: number;
 
     @Column()
