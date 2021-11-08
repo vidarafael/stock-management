@@ -9,7 +9,7 @@
    "logging": true,
    "logger": "file",
    "entities": [
-      "src/modules/**/infra/typeorm/entities/*.ts"
+      "src/modules/infra/typeorm/entities/*.ts"
    ],
    "migrations": [
       "src/shared/infra/typeorm/migration/*.ts"
@@ -18,7 +18,7 @@
       "src/subscriber/**/*.ts"
    ],
    "cli": {
-      "entitiesDir": "src/modules/**/infra/typeorm/entities/**/*.ts",
+      "entitiesDir": "src/modules/exampleModule/infra/typeorm/entities",
       "migrationsDir": "src/shared/infra/typeorm/migration/",
       "subscribersDir": "src/subscriber"
    }
