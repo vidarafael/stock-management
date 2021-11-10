@@ -1,9 +1,13 @@
 import {Router} from 'express';
 import ExampleController from "../controllers/ExampleController";
+import {CreateProductController} from "@modules/exampleModule/infra/http/controllers/CreateProductController";
 
-const exampleModule = Router();
-const exampleController = new ExampleController();
+const router = Router();
+// const exampleController = new ExampleController();
+// router.get('', exampleController.listExample)
 
-exampleModule.get('', exampleController.listExample)
+const createProductController = new CreateProductController()
 
-export default exampleModule;
+router.post("/product", createProductController.handle)
+
+export default router;
