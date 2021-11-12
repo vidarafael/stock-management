@@ -1,28 +1,30 @@
 import IProductDTO from "../../../dtos/IProductDTO";
-import {Entity, PrimaryColumn, Column} from "typeorm";
+import {Entity, PrimaryColumn, Column, OneToOne, OneToMany, ManyToOne, JoinColumn} from "typeorm";
 import { EquipmentType } from "./EquipmentType";
 import { Company } from "./Company";
 
 @Entity('general_product')
 export class Product implements IProductDTO {
 
-    @PrimaryColumn("id_general_product")
-    id!: number;
+    @PrimaryColumn({name:"id_general_product"})
+    id: number;
+
+    @Column({name: "serial_number"})
+    serialNumber?: number;
+
+    @ManyToOne(() => Company)
+    @JoinColumn({referencedColumnName: 'id', name: 'id_general_company'})    
+    company: Company;
 
     @Column()
-    serialNumber!: number;
+    description: string;
+
+    @OneToOne(() => EquipmentType)
+    @JoinColumn({referencedColumnName: 'id', name: 'id_equipment_type'})
+    equipmentType: EquipmentType;
 
     @Column()
-    company!: Company;
-
-    @Column()
-    description!: string;
-
-    @Column()
-    equipmentType!: EquipmentType;
-
-    @Column()
-    quantity!: number;
+    quantity?: number;
 
 
 

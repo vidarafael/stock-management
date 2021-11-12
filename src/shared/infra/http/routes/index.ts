@@ -3,6 +3,7 @@ import exampleModule from "../../../../modules/exampleModule/infra/http/routes/e
 
 const mainRouter = Router();
 
-mainRouter.use('/exampleModule', exampleModule);
+console.log("Teste rota")
+mainRouter.use('/product', exampleModule);
 
 export default mainRouter;

@@ -3,19 +3,19 @@ import {MigrationInterface, QueryRunner, Table, TableColumn, TableForeignKey} fr
 export class stockManagementCreateTableProduct1636376880674 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.createTable(new Table({
-            name: 'equipment_type',
-            columns: [
-                new TableColumn({
-                    name: 'id_equipment_type',
-                    type: 'int',
-                    isPrimary: true,
-                    isGenerated: true,
-                    generationStrategy: 'increment',
-                    isNullable: false
-                }),
-            ]
-        }))
+        // await queryRunner.createTable(new Table({
+        //     name: 'equipment_type',
+        //     columns: [
+        //         new TableColumn({
+        //             name: 'id_equipment_type',
+        //             type: 'int',
+        //             isPrimary: true,
+        //             isGenerated: true,
+        //             generationStrategy: 'increment',
+        //             isNullable: false
+        //         }),
+        //     ]
+        // }))
 
         await queryRunner.createTable(new Table({
             name: 'general_product',
@@ -32,7 +32,7 @@ export class stockManagementCreateTableProduct1636376880674 implements Migration
                 new TableColumn({
                     name: 'serial_number',
                     type: 'int',
-                    isNullable: false
+                    isNullable: true
                 }),
 
                 new TableColumn({
@@ -56,31 +56,31 @@ export class stockManagementCreateTableProduct1636376880674 implements Migration
                 new TableColumn({
                     name: 'quantity',
                     type: 'int',
-                    isNullable: false
+                    isNullable: true
                 })
             ]
 
         }))
 
-        await queryRunner.createTable(new Table({
-            name: 'general_company',
-            columns: [
-                new TableColumn({
-                    name: 'id_general_company',
-                    type: 'int',
-                    isPrimary: true,
-                    isGenerated: true,
-                    generationStrategy: 'increment',
-                    isNullable: false
-                }),
-
-                new TableColumn({
-                    name: 'company_name',
-                    type: 'varchar(255)'
-                })
-
-            ]
-        }))
+        // await queryRunner.createTable(new Table({
+        //     name: 'general_company',
+        //     columns: [
+        //         new TableColumn({
+        //             name: 'id_general_company',
+        //             type: 'int',
+        //             isPrimary: true,
+        //             isGenerated: true,
+        //             generationStrategy: 'increment',
+        //             isNullable: false
+        //         }),
+        //
+        //         new TableColumn({
+        //             name: 'company_name',
+        //             type: 'varchar(255)'
+        //         })
+        //
+        //     ]
+        // }))
         
         await queryRunner.createForeignKey("general_product", new TableForeignKey(
             {

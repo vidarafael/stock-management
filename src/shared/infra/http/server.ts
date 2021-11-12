@@ -2,10 +2,10 @@ import "reflect-metadata";
 import express from 'express';
 import mainRouter from "./routes";
 import {createConnection, getManager} from "typeorm";
-import router from "@modules/exampleModule/infra/http/routes/example.routes";
 
 const app = express();
 const port = 3333;
+app.use(express.json());
 
 app.listen(port, async () => {
     console.log(`SERVER STARTED ON http://localhost:${port}`);

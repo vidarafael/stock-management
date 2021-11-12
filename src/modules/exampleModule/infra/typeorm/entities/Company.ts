@@ -4,10 +4,9 @@ import {Column, Entity, PrimaryColumn} from "typeorm";
 
 @Entity('general_company')
 export class Company implements ICompanyDTO {
-    
-    @PrimaryColumn('id_general_company')
-    id!: number;
+    @PrimaryColumn({name: 'id_general_company'})
+    id: number;
 
     @Column()
-    name!: string;
+    name: string;
 }

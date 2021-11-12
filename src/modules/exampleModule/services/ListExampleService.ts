@@ -13,6 +13,7 @@ export default class ListExampleService {
     ) {}
 
     public async execute(): Promise<IExampleDTO[] | []> {
+        console.log("teste no serviço")
         return await this.exampleRepository.find();
     }
 

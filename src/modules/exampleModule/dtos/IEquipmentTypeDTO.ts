@@ -1,3 +1,3 @@
 export default interface IEquipmentTypeDTO {
-    id?: number;
+    id: number;
 }
