@@ -1,5 +1,5 @@
-import ICompanyDTO from "./ICompanyDTO";
-import IEquipmentTypeDTO from "./IEquipmentTypeDTO";
+import ICompanyDTO from "../../company/dtos/ICompanyDTO";
+import IEquipmentTypeDTO from "../../equipmentType/dtos/IEquipmentTypeDTO";
 
 
 export default interface IProductDTO {

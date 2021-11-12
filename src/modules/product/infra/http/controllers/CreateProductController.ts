@@ -1,7 +1,7 @@
 import CreateProductService from "../../../services/CreateProductService";
 import { NextFunction, Request, Response } from "express";
 import { container, injectable } from "tsyringe";
-import ExampleEntity from "../../typeorm/entities/ExampleEntity";
+import ExampleEntity from "../../../../exampleModule/infra/typeorm/entities/ExampleEntity";
 import { Product } from "../../typeorm/entities/Product";
 import ProductRepository from "../../typeorm/repositories/ProductRepository";
 

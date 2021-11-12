@@ -1,7 +1,7 @@
 import IProductDTO from "../../../dtos/IProductDTO";
 import {Entity, PrimaryColumn, Column, OneToOne, OneToMany, ManyToOne, JoinColumn} from "typeorm";
-import { EquipmentType } from "./EquipmentType";
-import { Company } from "./Company";
+import { EquipmentType } from "../../../../equipmentType/infra/typeorm/entities/EquipmentType";
+import { Company } from "../../../../company/infra/typeorm/entities/Company";
 
 @Entity('general_product')
 export class Product implements IProductDTO {
