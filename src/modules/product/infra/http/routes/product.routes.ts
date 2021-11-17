@@ -1,15 +1,15 @@
 import {Router} from 'express';
 import ExampleController from "../../../../company/infra/http/controllers/ExampleController";
-import {CreateProductController} from "../../../../product/infra/http/controllers/CreateProductController";
-import {FindProductController} from "../controllers/FindProductController";
+import {ProductController} from "../controllers/ProductController";
 
 const product = Router();
 
-const createProductController = new CreateProductController();
-const findProductController = new FindProductController();
+const productController = new ProductController();
 
-product.post('', createProductController.handle);
-product.get('/:id', findProductController.find);
+product.post('', productController.createProduct);
+product.get('/:id', productController.findProduct);
+product.put('/:id', productController.updateProduct);
+product.delete('/:id', productController.deleteProduct);
 
 
 

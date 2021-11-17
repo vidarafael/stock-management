@@ -3,6 +3,7 @@ import ProductRepository from "../infra/typeorm/repositories/ProductRepository";
 import IProductRepository from "../repositories/IProductRepository";
 import IProductDTO from "../dtos/IProductDTO";
 import {Product} from "../infra/typeorm/entities/Product";
+import {error} from "util";
 
 
 @injectable()
@@ -13,7 +14,18 @@ export class UpdateProductService {
         private productRepository:IProductRepository
     ){}
 
-    // public async execute(id: number): Promise <Product>{
-    //     return await this.productRepository.update(id)
-    // }
+    public async execute(id: number, data: Partial<Product>): Promise <Product | undefined>{
+        const product = await this.productRepository.findById(id);
+
+        if(!product){
+            throw new Error(`Product with id:${id} not found`)
+        }
+
+        return this.productRepository.update(id, data)
+    }
+    //     // procurar o dado que queremos atualizar
+    //     // verifica se o dado existe
+    //     // atualiza informacoes do dado recuperado
+    //     // persistir informação no banco
+
 }

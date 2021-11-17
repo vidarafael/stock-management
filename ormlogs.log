@@ -1839,3 +1839,950 @@
 [2021-11-12T17:34:50.942Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` = ? -- PARAMETERS: [1]
 [2021-11-12T17:34:52.153Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` = ? -- PARAMETERS: [2]
 [2021-11-12T17:34:53.727Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` = ? -- PARAMETERS: [2]
+[2021-11-15T11:46:36.208Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T11:46:36.220Z][QUERY]: CREATE TABLE `migrations` (`id` int NOT NULL AUTO_INCREMENT, `timestamp` bigint NOT NULL, `name` varchar(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2021-11-15T11:46:36.466Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T11:46:36.487Z]0 migrations are already loaded in the database.
+[2021-11-15T11:46:36.488Z]2 migrations were found in the source code.
+[2021-11-15T11:46:36.489Z]2 migrations are new migrations that needs to be executed.
+[2021-11-15T11:46:36.491Z][QUERY]: START TRANSACTION
+[2021-11-15T11:46:36.495Z][QUERY]: CREATE TABLE `example_table` (`id_example_table` int NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL DEFAULT now(), `updated_at` datetime NOT NULL DEFAULT now(), `deleted_at` datetime NULL, PRIMARY KEY (`id_example_table`)) ENGINE=InnoDB
+[2021-11-15T11:46:36.601Z][QUERY]: INSERT INTO `stock_management`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1636157284909,"stockManagementExampleMigration1636157284909"]
+[2021-11-15T11:46:36.618Z]Migration stockManagementExampleMigration1636157284909 has been executed successfully.
+[2021-11-15T11:46:36.619Z][QUERY]: CREATE TABLE `equipment_type` (`id_equipment_type` int NOT NULL AUTO_INCREMENT, PRIMARY KEY (`id_equipment_type`)) ENGINE=InnoDB
+[2021-11-15T11:46:36.700Z][QUERY]: CREATE TABLE `general_product` (`id_general_product` int NOT NULL AUTO_INCREMENT, `serial_number` int NULL, `id_general_company` int NOT NULL, `description` varchar(255) NOT NULL, `id_equipment_type` int NOT NULL, `quantity` int NULL, PRIMARY KEY (`id_general_product`)) ENGINE=InnoDB
+[2021-11-15T11:46:36.760Z][QUERY]: CREATE TABLE `general_company` (`id_general_company` int NOT NULL AUTO_INCREMENT, `company_name` varchar(255) NOT NULL, PRIMARY KEY (`id_general_company`)) ENGINE=InnoDB
+[2021-11-15T11:46:36.847Z][QUERY]: INSERT INTO `stock_management`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1636376880674,"stockManagementCreateTableProduct1636376880674"]
+[2021-11-15T11:46:36.866Z]Migration stockManagementCreateTableProduct1636376880674 has been executed successfully.
+[2021-11-15T11:46:36.868Z][QUERY]: COMMIT
+[2021-11-15T11:48:00.479Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T11:48:00.489Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T11:48:00.491Z]No migrations are pending
+[2021-11-15T12:18:37.609Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:18:37.620Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:18:37.622Z]No migrations are pending
+[2021-11-15T12:19:18.314Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:19:18.326Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:19:18.328Z]2 migrations are already loaded in the database.
+[2021-11-15T12:19:18.329Z]stockManagementCreateTableProduct1636376880674 is the last executed migration. It was executed on Mon Nov 08 2021 10:08:00 GMT-0300 (Horário Padrão de Brasília).
+[2021-11-15T12:19:18.330Z]Now reverting it...
+[2021-11-15T12:19:18.331Z][QUERY]: START TRANSACTION
+[2021-11-15T12:19:18.332Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-15T12:19:18.333Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_product'
+                    
+[2021-11-15T12:19:18.336Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+                
+[2021-11-15T12:19:18.336Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-15T12:19:18.337Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-15T12:19:18.337Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-15T12:19:18.337Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-15T12:19:18.352Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-15T12:19:18.355Z][QUERY]: ROLLBACK
+[2021-11-15T12:19:27.210Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:19:27.219Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:19:27.221Z]2 migrations are already loaded in the database.
+[2021-11-15T12:19:27.222Z]stockManagementCreateTableProduct1636376880674 is the last executed migration. It was executed on Mon Nov 08 2021 10:08:00 GMT-0300 (Horário Padrão de Brasília).
+[2021-11-15T12:19:27.223Z]Now reverting it...
+[2021-11-15T12:19:27.224Z][QUERY]: START TRANSACTION
+[2021-11-15T12:19:27.225Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-15T12:19:27.226Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_product'
+                    
+[2021-11-15T12:19:27.229Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+                
+[2021-11-15T12:19:27.229Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-15T12:19:27.230Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-15T12:19:27.230Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-15T12:19:27.231Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-15T12:19:27.239Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-15T12:19:27.242Z][QUERY]: ROLLBACK
+[2021-11-15T12:19:34.836Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:19:34.846Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:19:34.848Z]2 migrations are already loaded in the database.
+[2021-11-15T12:19:34.849Z]stockManagementCreateTableProduct1636376880674 is the last executed migration. It was executed on Mon Nov 08 2021 10:08:00 GMT-0300 (Horário Padrão de Brasília).
+[2021-11-15T12:19:34.849Z]Now reverting it...
+[2021-11-15T12:19:34.850Z][QUERY]: START TRANSACTION
+[2021-11-15T12:19:34.851Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-15T12:19:34.852Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_product'
+                    
+[2021-11-15T12:19:34.854Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+                
+[2021-11-15T12:19:34.855Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-15T12:19:34.856Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-15T12:19:34.856Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-15T12:19:34.856Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-15T12:19:34.865Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-15T12:19:34.868Z][QUERY]: ROLLBACK
+[2021-11-15T12:19:43.680Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:19:43.690Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:19:43.692Z]2 migrations are already loaded in the database.
+[2021-11-15T12:19:43.693Z]stockManagementCreateTableProduct1636376880674 is the last executed migration. It was executed on Mon Nov 08 2021 10:08:00 GMT-0300 (Horário Padrão de Brasília).
+[2021-11-15T12:19:43.693Z]Now reverting it...
+[2021-11-15T12:19:43.694Z][QUERY]: START TRANSACTION
+[2021-11-15T12:19:43.696Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-15T12:19:43.697Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_product'
+                    
+[2021-11-15T12:19:43.699Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+                
+[2021-11-15T12:19:43.700Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-15T12:19:43.700Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-15T12:19:43.701Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-15T12:19:43.701Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-15T12:19:43.710Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-15T12:19:43.713Z][QUERY]: ROLLBACK
+[2021-11-15T12:20:17.823Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:20:17.833Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:20:17.835Z]No migrations are pending
+[2021-11-15T12:20:48.458Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:20:48.465Z][QUERY]: CREATE TABLE `migrations` (`id` int NOT NULL AUTO_INCREMENT, `timestamp` bigint NOT NULL, `name` varchar(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2021-11-15T12:20:48.488Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:20:48.492Z]0 migrations are already loaded in the database.
+[2021-11-15T12:20:48.492Z]2 migrations were found in the source code.
+[2021-11-15T12:20:48.493Z]2 migrations are new migrations that needs to be executed.
+[2021-11-15T12:20:48.493Z][QUERY]: START TRANSACTION
+[2021-11-15T12:20:48.495Z][QUERY]: CREATE TABLE `example_table` (`id_example_table` int NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL DEFAULT now(), `updated_at` datetime NOT NULL DEFAULT now(), `deleted_at` datetime NULL, PRIMARY KEY (`id_example_table`)) ENGINE=InnoDB
+[2021-11-15T12:20:48.516Z][QUERY]: INSERT INTO `stock_management`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1636157284909,"stockManagementExampleMigration1636157284909"]
+[2021-11-15T12:20:48.520Z]Migration stockManagementExampleMigration1636157284909 has been executed successfully.
+[2021-11-15T12:20:48.521Z][QUERY]: CREATE TABLE `equipment_type` (`id_equipment_type` int NOT NULL AUTO_INCREMENT, PRIMARY KEY (`id_equipment_type`)) ENGINE=InnoDB
+[2021-11-15T12:20:48.538Z][QUERY]: CREATE TABLE `general_product` (`id_general_product` int NOT NULL AUTO_INCREMENT, `serial_number` int NULL, `id_general_company` int NOT NULL, `description` varchar(255) NOT NULL, `id_equipment_type` int NOT NULL, `quantity` int NULL, PRIMARY KEY (`id_general_product`)) ENGINE=InnoDB
+[2021-11-15T12:20:48.564Z][QUERY]: CREATE TABLE `general_company` (`id_general_company` int NOT NULL AUTO_INCREMENT, `company_name` varchar(255) NOT NULL, PRIMARY KEY (`id_general_company`)) ENGINE=InnoDB
+[2021-11-15T12:20:48.650Z][QUERY]: INSERT INTO `stock_management`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1636376880674,"stockManagementCreateTableProduct1636376880674"]
+[2021-11-15T12:20:48.656Z]Migration stockManagementCreateTableProduct1636376880674 has been executed successfully.
+[2021-11-15T12:20:48.658Z][QUERY]: COMMIT
+[2021-11-15T12:21:26.838Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:21:26.848Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:21:26.850Z]No migrations are pending
+[2021-11-15T12:22:24.827Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:22:24.837Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:22:24.838Z]No migrations are pending
+[2021-11-15T12:24:11.676Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:24:11.686Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:24:11.689Z]2 migrations are already loaded in the database.
+[2021-11-15T12:24:11.690Z]stockManagementCreateTableProduct1636376880674 is the last executed migration. It was executed on Mon Nov 08 2021 10:08:00 GMT-0300 (Horário Padrão de Brasília).
+[2021-11-15T12:24:11.690Z]Now reverting it...
+[2021-11-15T12:24:11.691Z][QUERY]: START TRANSACTION
+[2021-11-15T12:24:11.693Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-15T12:24:11.694Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_product'
+                    
+[2021-11-15T12:24:11.696Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+                
+[2021-11-15T12:24:11.697Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-15T12:24:11.697Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-15T12:24:11.698Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-15T12:24:11.698Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-15T12:24:11.708Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-15T12:24:11.711Z][QUERY]: DROP TABLE `general_product`
+[2021-11-15T12:24:11.737Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-15T12:24:11.738Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_company'
+                    
+[2021-11-15T12:24:11.740Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+                
+[2021-11-15T12:24:11.741Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_company'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-15T12:24:11.741Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-15T12:24:11.741Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-15T12:24:11.742Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_company'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-15T12:24:11.748Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-15T12:24:11.749Z][QUERY]: DROP TABLE `general_company`
+[2021-11-15T12:24:11.765Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-15T12:24:11.766Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'equipment_type'
+                    
+[2021-11-15T12:24:11.767Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'equipment_type'
+                
+[2021-11-15T12:24:11.768Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'equipment_type'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-15T12:24:11.768Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-15T12:24:11.769Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'equipment_type'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'equipment_type'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-15T12:24:11.769Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'equipment_type'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'equipment_type'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-15T12:24:11.775Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-15T12:24:11.776Z][QUERY]: DROP TABLE `equipment_type`
+[2021-11-15T12:24:11.797Z][QUERY]: DELETE FROM `stock_management`.`migrations` WHERE `timestamp` = ? AND `name` = ? -- PARAMETERS: [1636376880674,"stockManagementCreateTableProduct1636376880674"]
+[2021-11-15T12:24:11.801Z]Migration stockManagementCreateTableProduct1636376880674 has been reverted successfully.
+[2021-11-15T12:24:11.802Z][QUERY]: COMMIT
+[2021-11-15T12:24:48.158Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:24:48.167Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:24:48.169Z]1 migrations are already loaded in the database.
+[2021-11-15T12:24:48.169Z]2 migrations were found in the source code.
+[2021-11-15T12:24:48.170Z]stockManagementExampleMigration1636157284909 is the last executed migration. It was executed on Fri Nov 05 2021 21:08:04 GMT-0300 (Horário Padrão de Brasília).
+[2021-11-15T12:24:48.171Z]1 migrations are new migrations that needs to be executed.
+[2021-11-15T12:24:48.171Z][QUERY]: START TRANSACTION
+[2021-11-15T12:24:48.174Z][QUERY]: CREATE TABLE `equipment_type` (`id_equipment_type` int NOT NULL AUTO_INCREMENT, PRIMARY KEY (`id_equipment_type`)) ENGINE=InnoDB
+[2021-11-15T12:24:48.194Z][QUERY]: CREATE TABLE `general_product` (`id_general_product` int NOT NULL AUTO_INCREMENT, `serial_number` int NULL, `id_general_company` int NOT NULL, `description` varchar(255) NOT NULL, `id_equipment_type` int NOT NULL, `quantity` int NULL, PRIMARY KEY (`id_general_product`)) ENGINE=InnoDB
+[2021-11-15T12:24:48.214Z][QUERY]: CREATE TABLE `general_company` (`id_general_company` int NOT NULL AUTO_INCREMENT, `company_name` varchar(255) NOT NULL, PRIMARY KEY (`id_general_company`)) ENGINE=InnoDB
+[2021-11-15T12:24:48.232Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-15T12:24:48.233Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_product'
+                    
+[2021-11-15T12:24:48.235Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+                
+[2021-11-15T12:24:48.236Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-15T12:24:48.236Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-15T12:24:48.236Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-15T12:24:48.237Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-15T12:24:48.244Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-15T12:24:48.246Z][QUERY]: ALTER TABLE `general_product` ADD CONSTRAINT `id_general_company_FK` FOREIGN KEY (`id_general_company`) REFERENCES `general_company`(`id_general_company`)
+[2021-11-15T12:24:48.305Z][QUERY]: ALTER TABLE `general_product` ADD CONSTRAINT `id_equipment_type_FK` FOREIGN KEY (`id_equipment_type`) REFERENCES `equipment_type`(`id_equipment_type`)
+[2021-11-15T12:24:48.364Z][QUERY]: INSERT INTO `stock_management`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1636376880674,"stockManagementCreateTableProduct1636376880674"]
+[2021-11-15T12:24:48.368Z]Migration stockManagementCreateTableProduct1636376880674 has been executed successfully.
+[2021-11-15T12:24:48.369Z][QUERY]: COMMIT
+[2021-11-15T13:07:17.636Z][QUERY]: START TRANSACTION
+[2021-11-15T13:07:17.644Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, DEFAULT, ?, DEFAULT, DEFAULT, DEFAULT) -- PARAMETERS: ["Produto com Serial Number"]
+[2021-11-15T13:07:17.706Z][FAILED QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, DEFAULT, ?, DEFAULT, DEFAULT, DEFAULT) -- PARAMETERS: ["Produto com Serial Number"]
+[2021-11-15T13:07:17.706Z][QUERY ERROR]: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'id_general_company' doesn't have a default value
+[2021-11-15T13:07:17.708Z][QUERY]: ROLLBACK
+[2021-11-15T13:08:01.631Z][QUERY]: START TRANSACTION
+[2021-11-15T13:08:01.633Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, DEFAULT, ?, DEFAULT, DEFAULT, DEFAULT) -- PARAMETERS: ["Produto com Serial Number"]
+[2021-11-15T13:08:01.635Z][FAILED QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, DEFAULT, ?, DEFAULT, DEFAULT, DEFAULT) -- PARAMETERS: ["Produto com Serial Number"]
+[2021-11-15T13:08:01.635Z][QUERY ERROR]: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'id_general_company' doesn't have a default value
+[2021-11-15T13:08:01.636Z][QUERY]: ROLLBACK
+[2021-11-15T13:11:39.009Z][QUERY]: START TRANSACTION
+[2021-11-15T13:11:39.017Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, DEFAULT, ?) -- PARAMETERS: [9929192,"Produto com Serial Number",1]
+[2021-11-15T13:11:39.085Z][FAILED QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, DEFAULT, ?) -- PARAMETERS: [9929192,"Produto com Serial Number",1]
+[2021-11-15T13:11:39.085Z][QUERY ERROR]: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'id_general_company' doesn't have a default value
+[2021-11-15T13:11:39.086Z][QUERY]: ROLLBACK
+[2021-11-15T13:12:20.038Z][QUERY]: START TRANSACTION
+[2021-11-15T13:12:20.040Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, ?, ?) -- PARAMETERS: [9929192,"Produto com Serial Number",1,1]
+[2021-11-15T13:12:20.046Z][QUERY]: COMMIT
+[2021-11-15T13:46:10.235Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-15T13:46:10.246Z][QUERY]: UPDATE `general_product` SET `serial_number` = ?, `description` = ? WHERE `id_general_product` IN (?) -- PARAMETERS: [11112,"Produto Atualizado",1]
+[2021-11-15T13:46:10.253Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-15T14:19:58.099Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-15T14:19:58.110Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-16T13:32:21.468Z][QUERY]: START TRANSACTION
+[2021-11-16T13:32:21.479Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, ?, ?) -- PARAMETERS: [330291,"Produto criado com Serial Number",1,1]
+[2021-11-16T13:32:21.498Z][QUERY]: COMMIT
+[2021-11-16T13:33:24.905Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-16T13:34:08.664Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-16T13:34:21.197Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-16T13:34:34.290Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-16T13:35:16.113Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-16T13:35:24.267Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-16T13:36:29.657Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-16T13:36:29.664Z][QUERY]: UPDATE `general_product` SET `serial_number` = ?, `description` = ? WHERE `id_general_product` IN (?) -- PARAMETERS: [191817,"Produto criado com Serial Number1",2]
+[2021-11-16T13:36:29.669Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-16T13:37:06.003Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-16T13:37:06.014Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1

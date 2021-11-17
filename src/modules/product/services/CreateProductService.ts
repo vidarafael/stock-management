@@ -14,7 +14,7 @@ export default class CreateProductService{
     ){}
 
     public async execute(data: IProductDTO): Promise <Product>{
-        return await this.productRepository.create(data)
+        return this.productRepository.create(data)
     }
 
 }
