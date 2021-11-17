@@ -61,7 +61,7 @@ export class ProductController {
         request: Request,
         response: Response,
         next: NextFunction
-    ): Promise <Product | void> {
+    ): Promise <void> {
         const { id } = request.params
         try {
             const deleteProductService = container.resolve(DeleteProductService)

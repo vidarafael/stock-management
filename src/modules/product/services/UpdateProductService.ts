@@ -23,9 +23,6 @@ export class UpdateProductService {
 
         return this.productRepository.update(id, data)
     }
-    //     // procurar o dado que queremos atualizar
-    //     // verifica se o dado existe
-    //     // atualiza informacoes do dado recuperado
-    //     // persistir informação no banco
+
 
 }

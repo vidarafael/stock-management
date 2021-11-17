@@ -31,8 +31,7 @@ export default class ProductRepository implements IProductRepository {
         return this.repository.findOne(id);
     }
 
-    async delete(id: number): Promise<Product | undefined> {
+    async delete(id: number): Promise<void> {
         await this.repository.delete(id)
-        return this.repository.findOne()
     }
 }

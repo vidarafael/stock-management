@@ -2786,3 +2786,466 @@
 [2021-11-16T13:36:29.669Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
 [2021-11-16T13:37:06.003Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [2]
 [2021-11-16T13:37:06.014Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T11:24:15.758Z][QUERY]: START TRANSACTION
+[2021-11-17T11:24:15.763Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, ?, ?) -- PARAMETERS: [99887766,"Produto criado com Serial Number",1,1]
+[2021-11-17T11:24:15.789Z][QUERY]: COMMIT
+[2021-11-17T11:25:48.201Z][QUERY]: START TRANSACTION
+[2021-11-17T11:25:48.202Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, DEFAULT, ?, ?, ?, ?) -- PARAMETERS: ["Produto criado com Quantidade",99,1,1]
+[2021-11-17T11:25:48.203Z][QUERY]: COMMIT
+[2021-11-17T11:26:30.128Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T11:26:37.539Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T11:26:45.075Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [5]
+[2021-11-17T11:26:49.227Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T11:28:19.055Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T11:28:27.954Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T11:28:58.234Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T11:29:07.771Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T11:29:27.912Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T11:30:15.876Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T11:30:32.498Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T11:33:44.701Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T11:33:44.708Z][QUERY]: UPDATE `general_product` SET `description` = ?, `id_equipment_type` = ? WHERE `id_general_product` IN (?) -- PARAMETERS: ["Produto quantitativo atualizado",2,4]
+[2021-11-17T11:33:44.713Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T11:39:42.672Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T11:39:42.678Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T11:39:51.555Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T11:39:51.557Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T11:41:24.969Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-17T11:41:24.979Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-17T11:41:24.984Z]No migrations are pending
+[2021-11-17T11:41:54.356Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-17T11:41:54.366Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-17T11:41:54.368Z]2 migrations are already loaded in the database.
+[2021-11-17T11:41:54.371Z]stockManagementCreateTableProduct1636376880674 is the last executed migration. It was executed on Mon Nov 08 2021 10:08:00 GMT-0300 (Brasilia Standard Time).
+[2021-11-17T11:41:54.372Z]Now reverting it...
+[2021-11-17T11:41:54.372Z][QUERY]: START TRANSACTION
+[2021-11-17T11:41:54.373Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-17T11:41:54.374Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_product'
+                    
+[2021-11-17T11:41:54.378Z][QUERY]: ROLLBACK
+[2021-11-17T11:42:14.017Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-17T11:42:14.026Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-17T11:42:14.027Z]2 migrations are already loaded in the database.
+[2021-11-17T11:42:14.028Z]stockManagementCreateTableProduct1636376880674 is the last executed migration. It was executed on Mon Nov 08 2021 10:08:00 GMT-0300 (Brasilia Standard Time).
+[2021-11-17T11:42:14.028Z]Now reverting it...
+[2021-11-17T11:42:14.028Z][QUERY]: START TRANSACTION
+[2021-11-17T11:42:14.029Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-17T11:42:14.030Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_company'
+                    
+[2021-11-17T11:42:14.032Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+                
+[2021-11-17T11:42:14.033Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_company'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-17T11:42:14.033Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-17T11:42:14.034Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-17T11:42:14.034Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_company'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-17T11:42:14.044Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-17T11:42:14.047Z][QUERY]: DROP TABLE `general_company`
+[2021-11-17T11:42:14.059Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-17T11:42:14.060Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'equipment_type'
+                    
+[2021-11-17T11:42:14.063Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'equipment_type'
+                
+[2021-11-17T11:42:14.063Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'equipment_type'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-17T11:42:14.064Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-17T11:42:14.064Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'equipment_type'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'equipment_type'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-17T11:42:14.064Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'equipment_type'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'equipment_type'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-17T11:42:14.074Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-17T11:42:14.076Z][QUERY]: DROP TABLE `equipment_type`
+[2021-11-17T11:42:14.089Z][QUERY]: DELETE FROM `stock_management`.`migrations` WHERE `timestamp` = ? AND `name` = ? -- PARAMETERS: [1636376880674,"stockManagementCreateTableProduct1636376880674"]
+[2021-11-17T11:42:14.094Z]Migration stockManagementCreateTableProduct1636376880674 has been reverted successfully.
+[2021-11-17T11:42:14.094Z][QUERY]: COMMIT
+[2021-11-17T11:42:38.480Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-17T11:42:38.492Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-17T11:42:38.494Z]1 migrations are already loaded in the database.
+[2021-11-17T11:42:38.494Z]2 migrations were found in the source code.
+[2021-11-17T11:42:38.494Z]stockManagementExampleMigration1636157284909 is the last executed migration. It was executed on Fri Nov 05 2021 21:08:04 GMT-0300 (Brasilia Standard Time).
+[2021-11-17T11:42:38.494Z]1 migrations are new migrations that needs to be executed.
+[2021-11-17T11:42:38.495Z][QUERY]: START TRANSACTION
+[2021-11-17T11:42:38.497Z][QUERY]: CREATE TABLE `equipment_type` (`id_equipment_type` int NOT NULL AUTO_INCREMENT, PRIMARY KEY (`id_equipment_type`)) ENGINE=InnoDB
+[2021-11-17T11:42:38.518Z][QUERY]: CREATE TABLE `general_product` (`id_general_product` int NOT NULL AUTO_INCREMENT, `serial_number` int NULL, `id_general_company` int NOT NULL, `description` varchar(255) NOT NULL, `id_equipment_type` int NOT NULL, `quantity` int NULL, PRIMARY KEY (`id_general_product`)) ENGINE=InnoDB
+[2021-11-17T11:42:38.540Z][QUERY]: CREATE TABLE `general_company` (`id_general_company` int NOT NULL AUTO_INCREMENT, `company_name` varchar(255) NOT NULL, PRIMARY KEY (`id_general_company`)) ENGINE=InnoDB
+[2021-11-17T11:42:38.576Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-17T11:42:38.577Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_product'
+                    
+[2021-11-17T11:42:38.579Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+                
+[2021-11-17T11:42:38.580Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-17T11:42:38.580Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-17T11:42:38.580Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-17T11:42:38.580Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_product'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_product'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-17T11:42:38.589Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-17T11:42:38.591Z][QUERY]: ALTER TABLE `general_product` ADD CONSTRAINT `id_general_company_FK` FOREIGN KEY (`id_general_company`) REFERENCES `general_company`(`id_general_company`)
+[2021-11-17T11:42:38.636Z][QUERY]: ALTER TABLE `general_product` ADD CONSTRAINT `id_equipment_type_FK` FOREIGN KEY (`id_equipment_type`) REFERENCES `equipment_type`(`id_equipment_type`)
+[2021-11-17T11:42:38.691Z][QUERY]: INSERT INTO `stock_management`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1636376880674,"stockManagementCreateTableProduct1636376880674"]
+[2021-11-17T11:42:38.695Z]Migration stockManagementCreateTableProduct1636376880674 has been executed successfully.
+[2021-11-17T11:42:38.696Z][QUERY]: COMMIT
+[2021-11-17T12:19:43.172Z][QUERY]: START TRANSACTION
+[2021-11-17T12:19:43.177Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, DEFAULT, ?, ?, ?, ?) -- PARAMETERS: ["Produto criado com Quantidade",99,1,1]
+[2021-11-17T12:19:43.181Z][QUERY]: COMMIT
+[2021-11-17T12:20:28.223Z][QUERY]: START TRANSACTION
+[2021-11-17T12:20:28.225Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, ?, ?) -- PARAMETERS: [99201892,"Produto criado com Serial Number",1,1]
+[2021-11-17T12:20:28.227Z][QUERY]: COMMIT
+[2021-11-17T12:20:37.156Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:20:43.990Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:21:14.386Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:21:14.391Z][QUERY]: UPDATE `general_product` SET `description` = ?, `id_equipment_type` = ? WHERE `id_general_product` IN (?) -- PARAMETERS: ["Produto quantitativo atualizado",2,1]
+[2021-11-17T12:21:14.395Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:22:03.514Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:22:03.520Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T12:23:35.549Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:26:09.195Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:26:15.216Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:26:19.226Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:26:52.117Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:28:01.464Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:28:05.292Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:28:06.079Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:28:17.152Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:28:23.188Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:29:07.810Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:29:15.324Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:29:15.328Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:29:30.332Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:29:52.027Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:30:44.644Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:31:14.743Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:31:38.568Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:32:53.710Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:32:53.715Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:33:02.282Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:33:02.284Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T12:33:03.476Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:33:03.478Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T12:33:06.098Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:33:06.103Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T12:33:20.785Z][QUERY]: START TRANSACTION
+[2021-11-17T12:33:20.788Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, ?, ?) -- PARAMETERS: [99201892,"Produto criado com Serial Number",1,1]
+[2021-11-17T12:33:20.792Z][QUERY]: COMMIT
+[2021-11-17T12:33:26.788Z][QUERY]: START TRANSACTION
+[2021-11-17T12:33:26.789Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, ?, ?) -- PARAMETERS: [4564556,"Produto criado com Serial Number",1,1]
+[2021-11-17T12:33:26.790Z][QUERY]: COMMIT
+[2021-11-17T12:33:29.964Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:33:41.681Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:33:41.683Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:33:46.340Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T12:33:46.343Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T12:34:55.744Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T12:34:55.749Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T12:34:58.552Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [5]
+[2021-11-17T12:35:39.480Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [5]
+[2021-11-17T12:35:40.132Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [5]
+[2021-11-17T12:35:42.817Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [7]
+[2021-11-17T12:35:46.518Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:35:49.689Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:35:49.694Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:35:53.873Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T12:35:53.876Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T12:39:09.859Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [1]
+[2021-11-17T12:39:13.945Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:39:50.530Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:39:50.538Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T12:43:39.692Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [2]
+[2021-11-17T12:43:39.698Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T12:45:44.738Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:45:44.744Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` WHERE `Product`.`id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:47:55.486Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [3]
+[2021-11-17T12:47:59.933Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [4]
+[2021-11-17T12:49:16.424Z][QUERY]: START TRANSACTION
+[2021-11-17T12:49:16.430Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, ?, ?) -- PARAMETERS: [4564556,"Produto criado com Serial Number",1,1]
+[2021-11-17T12:49:16.433Z][QUERY]: COMMIT
+[2021-11-17T12:49:21.283Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [5]
+[2021-11-17T12:50:02.196Z][QUERY]: START TRANSACTION
+[2021-11-17T12:50:02.201Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, ?, ?) -- PARAMETERS: [4564556,"Produto criado com Serial Number",1,1]
+[2021-11-17T12:50:02.206Z][QUERY]: COMMIT
+[2021-11-17T12:50:14.294Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [6]
+[2021-11-17T12:50:14.302Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T14:49:36.669Z][QUERY]: START TRANSACTION
+[2021-11-17T14:49:36.674Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, DEFAULT, ?, ?, ?, ?) -- PARAMETERS: ["Produto criado com Quantidade",297,1,2]
+[2021-11-17T14:49:36.678Z][QUERY]: COMMIT
+[2021-11-17T14:49:42.850Z][QUERY]: START TRANSACTION
+[2021-11-17T14:49:42.851Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, DEFAULT, ?, ?, ?, ?) -- PARAMETERS: ["Produto criado com Quantidade2",297,1,2]
+[2021-11-17T14:49:42.852Z][QUERY]: COMMIT
+[2021-11-17T14:50:20.370Z][QUERY]: START TRANSACTION
+[2021-11-17T14:50:20.373Z][QUERY]: INSERT INTO `general_product`(`id_general_product`, `serial_number`, `description`, `quantity`, `id_general_company`, `id_equipment_type`) VALUES (DEFAULT, ?, ?, DEFAULT, ?, ?) -- PARAMETERS: [99290192,"Produto criado com Serial Number2",1,1]
+[2021-11-17T14:50:20.375Z][QUERY]: COMMIT
+[2021-11-17T14:50:30.959Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [7]
+[2021-11-17T14:50:30.967Z][QUERY]: SELECT `Product`.`id_general_product` AS `Product_id_general_product`, `Product`.`serial_number` AS `Product_serial_number`, `Product`.`description` AS `Product_description`, `Product`.`quantity` AS `Product_quantity`, `Product`.`id_general_company` AS `Product_id_general_company`, `Product`.`id_equipment_type` AS `Product_id_equipment_type` FROM `general_product` `Product` LIMIT 1
+[2021-11-17T14:54:34.775Z][QUERY]: DELETE FROM `general_product` WHERE `id_general_product` IN (?) -- PARAMETERS: [8]

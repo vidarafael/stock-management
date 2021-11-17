@@ -8,5 +8,5 @@ export default interface IProductRepository {
     update(id: number, data: Partial<Product>): Promise<Product | undefined>;
     find(): Promise<IProductDTO[]>
     findById(id:number): Promise<Product | undefined>
-    delete(id:number): Promise<Product | undefined>
+    delete(id:number): Promise<void>
 }

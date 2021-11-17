@@ -11,7 +11,7 @@ export class DeleteProductService{
         private productRepository:IProductRepository
     ){}
 
-    public async execute(id: number): Promise<Product | undefined>{
+    public async execute(id: number): Promise<void>{
         return this.productRepository.delete(id)
     }
 
