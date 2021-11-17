@@ -1,12 +1,12 @@
 import {Router} from 'express';
 import ExampleController from "../../../../company/infra/http/controllers/ExampleController";
-import {CreateProductController} from "../../../../product/infra/http/controllers/ProductController";
+import {ProductController} from "../../../../product/infra/http/controllers/ProductController";
 
 const exampleModule = Router();
 //const exampleController = new ExampleController();
 
-const createProductController = new CreateProductController();
+const createProductController = new ProductController();
 console.log("teste rota Create product");
 //exampleModule.get('', exampleController.listExample)
-exampleModule.post('', createProductController.handle);
+exampleModule.post('', createProductController.createProduct);
 export default exampleModule;

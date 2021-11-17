@@ -10,6 +10,7 @@ product.post('', productController.createProduct);
 product.get('/:id', productController.findProduct);
 product.put('/:id', productController.updateProduct);
 product.delete('/:id', productController.deleteProduct);
+product.get('', productController.listProducts);
 
 
 

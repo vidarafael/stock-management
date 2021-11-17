@@ -7,6 +7,7 @@ import ProductRepository from "../../typeorm/repositories/ProductRepository";
 import {FindProductService} from "../../../services/FindProductService";
 import {UpdateProductService} from "../../../services/UpdateProductService";
 import {DeleteProductService} from "../../../services/DeleteProductService";
+import ListProductsService from "../../../services/ListProductsService";
 
 @injectable()
 export class ProductController {
@@ -35,6 +36,20 @@ export class ProductController {
         try {
             const findProductService = container.resolve(FindProductService)
             response.json(await findProductService.execute(Number(id)))
+        } catch (error) {
+            next(error)
+        }
+
+    }
+    async listProducts(
+        request: Request,
+        response: Response,
+        next: NextFunction
+    ): Promise<Product[] | void> {
+        const {id} = request.params
+        try {
+            const listProductService = container.resolve(ListProductsService)
+            response.json(await listProductService.execute())
         } catch (error) {
             next(error)
         }
