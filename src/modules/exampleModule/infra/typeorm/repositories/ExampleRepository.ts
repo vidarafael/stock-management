@@ -10,11 +10,11 @@ export default class ExampleRepository implements IExampleRepository {
         this.repository = getRepository(ExampleEntity);
     }
 
-    find() {
+    public async find() {
         return this.repository.find();
     }
 
-    create(data: ExampleEntity): Promise<ExampleEntity> {
+    public async create(data: ExampleEntity): Promise<ExampleEntity> {
         return this.repository.save(data);
     }
 }

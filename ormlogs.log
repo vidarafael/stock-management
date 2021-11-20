@@ -133,3 +133,188 @@
 [2021-11-06T13:06:51.895Z][QUERY]: SELECT `ExampleEntity`.`id_example_table` AS `ExampleEntity_id_example_table`, `ExampleEntity`.`created_at` AS `ExampleEntity_created_at`, `ExampleEntity`.`updated_at` AS `ExampleEntity_updated_at`, `ExampleEntity`.`deleted_at` AS `ExampleEntity_deleted_at` FROM `example_table` `ExampleEntity` WHERE ( `ExampleEntity`.`id_example_table` = ? ) AND ( `ExampleEntity`.`deleted_at` IS NULL ) -- PARAMETERS: [2]
 [2021-11-06T13:06:51.897Z][QUERY]: COMMIT
 [2021-11-06T13:13:28.643Z][QUERY]: SELECT `ExampleEntity`.`id_example_table` AS `ExampleEntity_id_example_table`, `ExampleEntity`.`name` AS `ExampleEntity_name`, `ExampleEntity`.`created_at` AS `ExampleEntity_created_at`, `ExampleEntity`.`updated_at` AS `ExampleEntity_updated_at`, `ExampleEntity`.`deleted_at` AS `ExampleEntity_deleted_at` FROM `example_table` `ExampleEntity` WHERE `ExampleEntity`.`deleted_at` IS NULL
+[2021-11-15T12:02:09.937Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:02:09.955Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:02:09.958Z]1 migrations are already loaded in the database.
+[2021-11-15T12:02:09.959Z]2 migrations were found in the source code.
+[2021-11-15T12:02:09.960Z]stockManagementExampleMigration1636157284909 is the last executed migration. It was executed on Fri Nov 05 2021 21:08:04 GMT-0300 (Horário Padrão de Brasília).
+[2021-11-15T12:02:09.960Z]1 migrations are new migrations that needs to be executed.
+[2021-11-15T12:02:09.961Z][QUERY]: START TRANSACTION
+[2021-11-15T12:02:09.963Z][QUERY]: CREATE TABLE `general_company` (`id_general_company` int NOT NULL AUTO_INCREMENT, `company_code` varchar(255) NOT NULL, `company_code` int NOT NULL, `description` varchar(255) NULL, `created_at` datetime NOT NULL DEFAULT now(), `updated_at` datetime NOT NULL DEFAULT now(), `deleted_at` datetime NULL, PRIMARY KEY (`id_general_company`)) ENGINE=InnoDB
+[2021-11-15T12:02:10.022Z][FAILED QUERY]: CREATE TABLE `general_company` (`id_general_company` int NOT NULL AUTO_INCREMENT, `company_code` varchar(255) NOT NULL, `company_code` int NOT NULL, `description` varchar(255) NULL, `created_at` datetime NOT NULL DEFAULT now(), `updated_at` datetime NOT NULL DEFAULT now(), `deleted_at` datetime NULL, PRIMARY KEY (`id_general_company`)) ENGINE=InnoDB
+[2021-11-15T12:02:10.022Z][QUERY ERROR]: Error: ER_DUP_FIELDNAME: Duplicate column name 'company_code'
+[2021-11-15T12:02:10.024Z][QUERY]: ROLLBACK
+[2021-11-15T12:02:49.877Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:02:49.885Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:02:49.886Z]1 migrations are already loaded in the database.
+[2021-11-15T12:02:49.887Z]2 migrations were found in the source code.
+[2021-11-15T12:02:49.888Z]stockManagementExampleMigration1636157284909 is the last executed migration. It was executed on Fri Nov 05 2021 21:08:04 GMT-0300 (Horário Padrão de Brasília).
+[2021-11-15T12:02:49.888Z]1 migrations are new migrations that needs to be executed.
+[2021-11-15T12:02:49.889Z][QUERY]: START TRANSACTION
+[2021-11-15T12:02:49.891Z][QUERY]: CREATE TABLE `general_company` (`id_general_company` int NOT NULL AUTO_INCREMENT, `company_name` varchar(255) NOT NULL, `company_code` int NOT NULL, `description` varchar(255) NULL, `created_at` datetime NOT NULL DEFAULT now(), `updated_at` datetime NOT NULL DEFAULT now(), `deleted_at` datetime NULL, PRIMARY KEY (`id_general_company`)) ENGINE=InnoDB
+[2021-11-15T12:02:49.960Z][QUERY]: INSERT INTO `stock_management`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1636976883703,"stockManagementCompanyCreateTable1636976883703"]
+[2021-11-15T12:02:49.969Z]Migration stockManagementCompanyCreateTable1636976883703 has been executed successfully.
+[2021-11-15T12:02:49.970Z][QUERY]: COMMIT
+[2021-11-15T12:03:17.221Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T12:03:17.229Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T12:03:17.231Z]No migrations are pending
+[2021-11-15T13:05:33.926Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T13:05:33.941Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T13:05:33.944Z]2 migrations are already loaded in the database.
+[2021-11-15T13:05:33.953Z]stockManagementCompanyCreateTable1636976883703 is the last executed migration. It was executed on Mon Nov 15 2021 08:48:03 GMT-0300 (Horário Padrão de Brasília).
+[2021-11-15T13:05:33.954Z]Now reverting it...
+[2021-11-15T13:05:33.955Z][QUERY]: START TRANSACTION
+[2021-11-15T13:05:33.957Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2021-11-15T13:05:33.958Z][QUERY]: 
+                        SELECT `TABLE_SCHEMA`,
+                               `TABLE_NAME`
+                        FROM `INFORMATION_SCHEMA`.`TABLES`
+                        WHERE `TABLE_SCHEMA` = 'stock_management'
+                          AND `TABLE_NAME` = 'general_company'
+                    
+[2021-11-15T13:05:33.961Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+                
+[2021-11-15T13:05:33.962Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_company'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2021-11-15T13:05:33.963Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2021-11-15T13:05:33.963Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2021-11-15T13:05:33.964Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'stock_management'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'general_company'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'stock_management'
+                    AND
+                    `TABLE_NAME` = 'general_company'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2021-11-15T13:05:33.981Z][QUERY]: SELECT VERSION() AS `version`
+[2021-11-15T13:05:33.984Z][QUERY]: DROP TABLE `general_company`
+[2021-11-15T13:05:34.057Z][QUERY]: DELETE FROM `stock_management`.`migrations` WHERE `timestamp` = ? AND `name` = ? -- PARAMETERS: [1636976883703,"stockManagementCompanyCreateTable1636976883703"]
+[2021-11-15T13:05:34.063Z]Migration stockManagementCompanyCreateTable1636976883703 has been reverted successfully.
+[2021-11-15T13:05:34.064Z][QUERY]: COMMIT
+[2021-11-15T13:08:00.696Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'stock_management' AND `TABLE_NAME` = 'migrations'
+[2021-11-15T13:08:00.709Z][QUERY]: SELECT * FROM `stock_management`.`migrations` `migrations` ORDER BY `id` DESC
+[2021-11-15T13:08:00.711Z]1 migrations are already loaded in the database.
+[2021-11-15T13:08:00.712Z]2 migrations were found in the source code.
+[2021-11-15T13:08:00.713Z]stockManagementExampleMigration1636157284909 is the last executed migration. It was executed on Fri Nov 05 2021 21:08:04 GMT-0300 (Horário Padrão de Brasília).
+[2021-11-15T13:08:00.713Z]1 migrations are new migrations that needs to be executed.
+[2021-11-15T13:08:00.714Z][QUERY]: START TRANSACTION
+[2021-11-15T13:08:00.717Z][QUERY]: CREATE TABLE `general_company` (`id_general_company` int NOT NULL AUTO_INCREMENT, `company_name` varchar(255) NOT NULL, `company_code` varchar(255) NOT NULL, `description` varchar(255) NULL, `created_at` datetime NOT NULL DEFAULT now(), `updated_at` datetime NOT NULL DEFAULT now(), `deleted_at` datetime NULL, PRIMARY KEY (`id_general_company`)) ENGINE=InnoDB
+[2021-11-15T13:08:00.764Z][QUERY]: INSERT INTO `stock_management`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1636976883703,"stockManagementCompanyCreateTable1636976883703"]
+[2021-11-15T13:08:00.770Z]Migration stockManagementCompanyCreateTable1636976883703 has been executed successfully.
+[2021-11-15T13:08:00.771Z][QUERY]: COMMIT
+[2021-11-15T13:20:40.623Z][QUERY]: SELECT `Company`.`id_sys_company` AS `Company_id_sys_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description` FROM `general_company` `Company`
+[2021-11-15T13:20:40.688Z][FAILED QUERY]: SELECT `Company`.`id_sys_company` AS `Company_id_sys_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description` FROM `general_company` `Company`
+[2021-11-15T13:20:40.688Z][QUERY ERROR]: Error: ER_BAD_FIELD_ERROR: Unknown column 'Company.id_sys_company' in 'field list'
+[2021-11-15T13:21:23.560Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description` FROM `general_company` `Company`
+[2021-11-15T13:31:39.029Z][QUERY]: START TRANSACTION
+[2021-11-15T13:31:39.035Z][QUERY]: INSERT INTO `general_company`(`id_general_company`, `company_name`, `company_code`, `description`) VALUES (DEFAULT, ?, ?, ?) -- PARAMETERS: ["osDedé","40028922A","Master João"]
+[2021-11-15T13:31:39.039Z][QUERY]: COMMIT
+[2021-11-15T13:31:47.290Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description` FROM `general_company` `Company`
+[2021-11-15T13:34:47.101Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-15T13:36:08.011Z][QUERY]: START TRANSACTION
+[2021-11-15T13:36:08.016Z][QUERY]: INSERT INTO `general_company`(`id_general_company`, `company_name`, `company_code`, `description`, `created_at`, `updated_at`, `deleted_at`) VALUES (DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT) -- PARAMETERS: ["JoãosJo","40028922A","Master"]
+[2021-11-15T13:36:08.021Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE ( `Company`.`id_general_company` = ? ) AND ( `Company`.`deleted_at` IS NULL ) -- PARAMETERS: [2]
+[2021-11-15T13:36:08.024Z][QUERY]: COMMIT
+[2021-11-15T13:36:27.728Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-15T14:10:52.209Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-15T14:11:25.779Z][QUERY]: DELETE FROM `general_company` WHERE `id_general_company` IN (?) -- PARAMETERS: [1]
+[2021-11-15T14:11:45.940Z][QUERY]: DELETE FROM `general_company` WHERE `id_general_company` IN (?) -- PARAMETERS: [1]
+[2021-11-15T14:11:48.831Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-15T14:12:04.009Z][QUERY]: START TRANSACTION
+[2021-11-15T14:12:04.014Z][QUERY]: INSERT INTO `general_company`(`id_general_company`, `company_name`, `company_code`, `description`, `created_at`, `updated_at`, `deleted_at`) VALUES (DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT) -- PARAMETERS: ["OsDedés","40028922A","Master"]
+[2021-11-15T14:12:04.017Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE ( `Company`.`id_general_company` = ? ) AND ( `Company`.`deleted_at` IS NULL ) -- PARAMETERS: [3]
+[2021-11-15T14:12:04.020Z][QUERY]: COMMIT
+[2021-11-15T14:12:06.752Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-15T14:12:20.983Z][QUERY]: START TRANSACTION
+[2021-11-15T14:12:20.985Z][QUERY]: INSERT INTO `general_company`(`id_general_company`, `company_name`, `company_code`, `description`, `created_at`, `updated_at`, `deleted_at`) VALUES (DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT) -- PARAMETERS: ["eKaizenTrain","40028922A","Master"]
+[2021-11-15T14:12:20.987Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE ( `Company`.`id_general_company` = ? ) AND ( `Company`.`deleted_at` IS NULL ) -- PARAMETERS: [4]
+[2021-11-15T14:12:20.988Z][QUERY]: COMMIT
+[2021-11-15T14:12:22.737Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-15T14:12:34.662Z][QUERY]: DELETE FROM `general_company` WHERE `id_general_company` IN (?) -- PARAMETERS: [3]
+[2021-11-15T14:12:37.758Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-15T14:12:47.853Z][QUERY]: START TRANSACTION
+[2021-11-15T14:12:47.855Z][QUERY]: INSERT INTO `general_company`(`id_general_company`, `company_name`, `company_code`, `description`, `created_at`, `updated_at`, `deleted_at`) VALUES (DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT) -- PARAMETERS: ["teste","40028922A","Master"]
+[2021-11-15T14:12:47.857Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE ( `Company`.`id_general_company` = ? ) AND ( `Company`.`deleted_at` IS NULL ) -- PARAMETERS: [5]
+[2021-11-15T14:12:47.858Z][QUERY]: COMMIT
+[2021-11-15T14:12:49.432Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-15T14:35:11.820Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE `Company`.`deleted_at` IS NULL
+[2021-11-15T14:36:02.730Z][QUERY]: UPDATE `general_company` SET `company_name` = ?, `company_code` = ?, `description` = ?, `updated_at` = CURRENT_TIMESTAMP WHERE `id_general_company` IN (?) -- PARAMETERS: ["testeUpdate","A0028922A","Master",2]
+[2021-11-15T14:36:06.927Z][QUERY]: SELECT `Company`.`id_general_company` AS `Company_id_general_company`, `Company`.`company_name` AS `Company_company_name`, `Company`.`company_code` AS `Company_company_code`, `Company`.`description` AS `Company_description`, `Company`.`created_at` AS `Company_created_at`, `Company`.`updated_at` AS `Company_updated_at`, `Company`.`deleted_at` AS `Company_deleted_at` FROM `general_company` `Company` WHERE `Company`.`deleted_at` IS NULL
