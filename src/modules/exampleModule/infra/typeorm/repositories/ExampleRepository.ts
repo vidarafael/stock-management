@@ -1,8 +1,9 @@
 import {injectable} from "tsyringe";
-import {getRepository, Repository} from "typeorm";
+import {EntityRepository, getRepository, Repository} from "typeorm";
 import ExampleEntity from "../entities/ExampleEntity";
 import IExampleRepository from "../../../repositories/IExampleRepository";
 
+@EntityRepository()
 @injectable()
 export default class ExampleRepository implements IExampleRepository {
     private repository: Repository<ExampleEntity>
