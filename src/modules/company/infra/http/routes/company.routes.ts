@@ -1,13 +1,15 @@
 import {Router} from 'express';
 import CompanyController from "../controllers/CompanyController";
+import {celebrate} from "celebrate";
+import {companySchemaBody, companySchemaOptions, companySchemaParams} from "../../../schemas/company.schema";
 
 const routes = Router();
 const companyController = new CompanyController();
 
 routes.get('/', companyController.list)
-routes.post('/', companyController.create)
-routes.delete('/:id', companyController.delete)
-routes.put('/:id', companyController.update)
+routes.post('/', celebrate({ ...companySchemaBody }, companySchemaOptions), companyController.create)
+routes.delete('/:companyId', celebrate({ ...companySchemaParams }, companySchemaOptions),companyController.delete)
+routes.put('/:companyId', celebrate({ ...companySchemaParams, ...companySchemaBody }, companySchemaOptions), companyController.update)
 
 
 export default routes;

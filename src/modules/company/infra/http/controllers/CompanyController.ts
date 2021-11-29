@@ -29,7 +29,7 @@ export default class CompanyController {
 
     }
 
-    public async update(request: Request, response: Response, next: NextFunction) {
+    public async update(request: Request, response: Response, next: NextFunction): Promise<Response | void> {
         const { id } = request.params
 
         const {
@@ -52,7 +52,7 @@ export default class CompanyController {
         }
     }
 
-    public async delete(request: Request, response: Response, next: NextFunction) {
+    public async delete(request: Request, response: Response, next: NextFunction): Promise<void> {
         const { id } = request.params
 
         try {
@@ -66,7 +66,7 @@ export default class CompanyController {
         }
     }
 
-    public async list(request: Request, response: Response, next: NextFunction) {
+    public async list(request: Request, response: Response, next: NextFunction): Promise<Response | void> {
         try {
             const listService = container.resolve(ListCompanyService);
 
